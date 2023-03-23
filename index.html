@@ -62,12 +62,12 @@
       }
 
       .step.is-active {
-        background-color: goldenrod;
+        background-color: #00fffb;
         color: #3b3b3b;
       }
 
       .step p {
-        text-align: center;
+        text-align: left;
         padding: 1rem;
         font-size: 1.5rem;
       }
@@ -93,16 +93,18 @@
     </main>
 
       <section id="intro">
-        <h1 class="intro__hed">Sticky Side Example</h1>
+        <h1 class="intro__hed">This is our opening headline.</h1>
         <p class="intro__dek">
-          Start scrolling to see how it works.
+          This is some descriptor text for our opening headline.
+          
+          <br> Keep scrolling to learn more.
         </p>
       </section>
 
       <section id="scrolly">
         <article>
           <div class="step" data-step="1">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>This is the first step of our story. This would be where we add a description for the first graphic.</p>
           </div>
           <div class="step" data-step="2">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -115,13 +117,22 @@
           </div>
         </article>
 
-        <div class="sticky-thing">
+        <div class="sticky-thing" data-step="1">
           <p>0</p>
+        </div>
+        <div class="sticky-thing" data-step="2">
+          <p>1</p>
         </div>
       </section>
 
-      <section id="outro"></section>
-    </main>
+      <section id="outro">
+        This is the end of this major scrolling section.
+      </section>
+    
+    <section>
+      <h1> This is the start of another non-scrolling section. </h1>
+    </section>
+    
 
     <!-- <div class='debug'></div> -->
     <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
