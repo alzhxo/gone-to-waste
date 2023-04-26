@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="animations.js"></script>
+    <style>
+        .btn {
+        will-change: transform;
+        animation:float 2s  ease-in-out infinite;
+        transition: transform 450ms;
+        }
+  
+        .btn:hover {
+            transition: transform 125ms;
+            transform: translateY(-10px);
+        }
+        @keyframes float{
+        0%{transform: translateY(0px);}
+		25%{transform: translateY(10px);}
+		50%{transform: translateY(-10px);}
+		75%{transform: translateY(10px);}
+	    }
+    </style>
+    </head>
+    <body>
+
+        <div id = "titlepage">
+            <div class="image-container">
+                <img src="assets/banner.jpg" alt="Background Image"></img>
+                <div title style="position: absolute; width: 1300px; height: 131px; left: 70px; top: 545px">
+                    Waste and see:
+                </div>
+                
+                <div subtitle style="position: absolute; width: 1300px; height: 130px; left: 70px; top: 712px">
+                    Taking a deeper look at the scale and impact of food waste in the United States
+                </div>
+                    
+                <h2 style="position: absolute;
+                width: 1300px;
+                height: 58px;
+                left: 70px;
+                top: 878px;">
+                Created by Alicia Z., Adeel C., and Haritha S. R.
+                <br/>for INFO 247 Spring 2023
+                </h2>
+
+            </div>
+            <button style="position: absolute; left:672px; bottom: 12px" class="btn" onclick=scrollToSection('section1')>
+                Start ↓
+              </button>
+        </div>
+
+        <div class = "spacer"></div>
+
+        <div id = "section1"  class = "screen">
+            <div class = "container">
+                <div class = "content">
+                    <h1>Food loss and waste in the United States is a huge problem.</h1>
+                    <h2>The United States is the 2nd largest generator of food loss and waste* (FLW) in the world, both per capita and overall.</h2>
+                </div>
+            </div>
+            <div class = "container">
+                <div class='tableauPlaceholder' id='viz1682465016082' style='position: relative; margin: auto'>
+                    <noscript>
+                        <a href='#'><img alt='FLW Country Chart ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;To&#47;Top20FLWCountries&#47;FLWCountryChart&#47;1_rss.png' style='border: none' />
+                        </a>
+                    </noscript>
+                    <object class='tableauViz'  style='display:none;'>
+                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                        <param name='embed_code_version' value='3' />
+                        <param name='site_root' value='' />
+                        <param name='name' value='Top20FLWCountries&#47;FLWCountryChart' />
+                        <param name='tabs' value='no' />
+                        <param name='toolbar' value='yes' />
+                        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;To&#47;Top20FLWCountries&#47;FLWCountryChart&#47;1.png' /> 
+                        <param name='animate_transition' value='yes' />
+                        <param name='display_static_image' value='yes' />
+                        <param name='display_spinner' value='yes' />
+                        <param name='display_overlay' value='yes' />
+                        <param name='display_count' value='yes' />
+                        <param name='language' value='en-US' />
+                        </object>
+                    </div>
+                    <script type='text/javascript'>                    var divElement = document.getElementById('viz1682465016082');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='800px';vizElement.style.height='627px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='800px';vizElement.style.height='627px';} else { vizElement.style.width='100%';vizElement.style.height='777px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+                    </script>
+            </div>
+            <div class="container">
+                <div class = "content">
+                <h2 class="bolded">*What's the difference between loss and waste?</h2>
+                <ul>
+                    <li><b>Loss</b> occurs on farms, during storage, and in transport, prior to packaging for retail. 
+                        <ul>
+                            <li>Examples of loss include unharvested crops, weather- or insect-damaged food, and spoiled or damaged food in transit.</li>
+                        </ul>
+                        </li>
+                    <li><b>Waste</b> occurs in restaurants, in households, and in stores. 
+                        <ul>
+                            <li>This is the food that was edible but not ultimately consumed.</li>
+                        </ul>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id = "section2"  class = "screen">
+            <div class = "container">
+                <hr>
+                <div class="content">
+                <h1>In the United States, 35% of all food produced for human consumption goes unsold or uneaten.</h1>
+                <h2>
+                    While a small fraction of this surplus gets donated or recycled, the majority of it ends up wasted.
+                </h2>
+                <p>
+                    The chart below tracks the flow of food surplus to its final destination, as well as which sectors were responsible.
+                </p>
+                </div>
+
+                <iframe width="100%" height="784" frameborder="0"
+                src="https://observablehq.com/embed/14472a5a08975da3?cells=viewof+linkColor%2Cviewof+breakdown%2Cchart"></iframe>
+
+            </div>
+        </div>
+        <script>
+            document.addEventListener("scroll", function() {
+            var contents = document.querySelectorAll(".content");
+            for (var i = 0; i < contents.length; i++) {
+            if (isInViewport(contents[i])) {
+                contents[i].classList.add("in-view");
+            }
+            }
+        });
+        </script>
+    </body>
+</html>
