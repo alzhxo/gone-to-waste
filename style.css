@@ -65,9 +65,10 @@
     font-weight: 700;
     font-size: 128px;
     line-height: 156px;
-    display: flex;
     align-items: center;
     text-align: center;
+    width: 100%;
+    margin: auto;
 
     color: #000000;
   }
