@@ -3,6 +3,16 @@ function scrollToSection(id) {
     section.scrollIntoView({behavior: "smooth"});
   }
 
+function fadeOut(id) {
+    const image = document.getElementById(id);
+    image.classList.add("fade-out");
+  }
+
+function fadeIn(id) {
+    const image = document.getElementById(id);
+    image.classList.add("fade-in");
+  }
+
 function isInViewport(element) {
 var rect = element.getBoundingClientRect();
 return (
