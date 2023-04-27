@@ -73,6 +73,10 @@
     color: #000000;
   }
 
+  .grow{
+    animation: grow 7s ease-in-out 1;
+  }
+
   h3,
   h4,
   a {
@@ -168,5 +172,5 @@
 
 
 .spacer {
-    height: 400px;
+    height: 200px;
     }
