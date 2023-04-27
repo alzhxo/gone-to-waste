@@ -58,7 +58,7 @@
     letter-spacing: -0.02em;
   }
 
-  [kpi] {
+  .kpi {
     font-family: 'Helvetica Neue', 'Open Sans', BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, sans-serif;
     font-style: normal;
@@ -69,7 +69,7 @@
     text-align: center;
     width: 100%;
     margin: auto;
-
+    animation: grow 2s linear 1;
     color: #000000;
   }
 
@@ -124,6 +124,12 @@
     font-size: 18px;
     font-weight: 400;
     line-height: 1;
+  }
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 
 .image-container {
