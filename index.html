@@ -7,19 +7,36 @@
         .btn {
         will-change: transform;
         animation:float 2s  ease-in-out infinite;
-        transition: transform 450ms;
+        transition: all 500ms;
         }
   
         .btn:hover {
-            transition: transform 125ms;
-            transform: translateY(-10px);
+            transition: opacity ease-in-out;
+            opacity: 0.8;
         }
+
         @keyframes float{
         0%{transform: translateY(0px);}
 		25%{transform: translateY(10px);}
 		50%{transform: translateY(-10px);}
 		75%{transform: translateY(10px);}
 	    }
+
+        @keyframes grow{
+            0% {transform: scale(0.5);}
+            100% {transform: scale(1)}
+        }
+
+        .fade-out {
+        opacity: 0;
+        transition: opacity 0.3s linear;
+        }
+
+        .fade-in {
+        opacity: 1;
+        transition: opacity 0.3s linear;
+        }
+        
     </style>
     </head>
     <body>
@@ -165,7 +182,7 @@
                 </div>
                 <div class="content">
                     <h2>Economically, the amount of wasted food per year is valued at </h2>
-                    <div kpi class="shadow">$408 billion</div>
+                    <div class="kpi">$408 billion</div>
                     <h2 style="text-align: right">or approximately 2% of the United States’ GDP. </h2>
                 </div>
                 <div class="content">
@@ -179,22 +196,39 @@
                 </div>
             </div>
         </div>
-	<div id = "section5"  class = "screen">
-	    <div class = "container">
-		<div class="content">
-		    <h1>Food waste is wreaking havoc on our environment too.</h1>
-		</div>
-		<div class="content">
-		    <h2>When food is discarded, <b>all inputs used (such as land, energy, and water)</b> in producing, processing, transporting, preparing, and storing the discarded food <b>are also wasted.</b>
-		    <p> The greenhouse gas (GHG) emissions from each step of the supply chain add up quickly.</p></h2>
-		</div>
-		<div class="image-container">
-		    <img style="position: relative; display:block; margin: auto; width: 1024px; height: auto; top:8px" src = "assets/GHG-emissions-lifecycle.svg"></img>
-		    <p style="font-size:small">Image adapted from: https://refed.org/food-waste/climate-and-resources/</p>
-		</div>
-	    </div>
-	</div>
-
+        <div id = "section5"  class = "screen">
+            <div class = "container">
+                <div class="content">
+                    <h1>Food waste is wreaking havoc on our environment too.</h1>
+                </div>
+                <div class="content">
+                    <h2>When food is discarded, <b>all inputs used (such as land, energy, and water)</b> in producing, processing, transporting, preparing, and storing the discarded food <b>are also wasted.</b>
+                    <p> The greenhouse gas (GHG) emissions from each step of the supply chain add up quickly.</p></h2>
+                </div>
+                <div class="image-container">
+                    <img style="position: relative; display:block; margin: auto; width: 1024px; height: auto; top:8px" src = "assets/GHG-emissions-lifecycle.svg"></img>
+                    <p style="font-size:small">Image adapted from: https://refed.org/food-waste/climate-and-resources/</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id = "section6"  class = "screen">
+            <div class = "container">
+                <div class="content">
+                    <h1>Every year, U.S. Food Loss and Waste (FLW) uses up the equivalent of:</h1>
+                </div>
+                <div class="flex-container" style="position:relative; left:0px; top:32px; z-index: 1;">
+                    <div><img style="width: 400px; height: auto;" src="assets/card1-reveal.svg"></img></div>
+                    <div><img style="width: 400px; height: auto;" src="assets/card2-reveal.svg"></img></div>
+                    <div><img style="width: 400px; height: auto;" src="assets/card3-reveal.svg"></img></div>
+                </div>
+                <div class="flex-container" style="position:relative; left:0px; top:-400px; z-index: 2;">
+                    <div id="card1"><img src="assets/card_acresofland.svg" onclick="fadeOut('card1')"></img></div>
+                    <div id="card2"> <img src="assets/card_MTCO2e.svg" onclick="fadeOut('card2')"></img></div>
+                    <div id="card3"><img src="assets/card_bluewater.svg" onclick="fadeOut('card3')"></img> </div>
+                </div>       
+            </div>
+        </div>
 
 
         <script>
