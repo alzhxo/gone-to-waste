@@ -62,7 +62,7 @@
                 </h2>
 
             </div>
-            <button style="position: absolute; left:672px; bottom: 12px" class="btn" onclick=scrollToSection('section1')>
+            <button style="position: absolute; right:128px; bottom: 12px" class="btn" onclick=scrollToSection('section1')>
                 Start ↓
               </button>
         </div>
@@ -165,11 +165,8 @@
                     <div class="content">
                         <img style="position: absolute; width: 580px; height: 184px; left: 64px;top: 578px" src = "assets/callout.svg"></img>
                         <img style="position: absolute; width: 600px; height: 128px; left: 420px;top: 776px" src = "assets/1in6-50mil.svg"></img>
-                        <h2 style="position: absolute;
-                        width: 503px;
-                        height: 84px;
-                        left: 106px;
-                        top: 570px;">This is happening in the same country where it’s estimated that more than <b style="color:#386667"> 1 in 6 people face food insecurity.</b></h2>
+                        <h3 style="letter-spacing: 0.01em; font-weight: 400; position: absolute; width: 503px; height: 84px;
+                        left: 106px; top: 570px;">This is happening in the same country where it’s estimated that more than <b style="color:#386667"> 1 in 6 people face food insecurity.</b></h3>
                     </div>
                 </div>
             </div>    
@@ -351,17 +348,33 @@
 
         </div>
 
-        <div id = "refs"  class = "screen">
-            <hr>
-            <div class="container">
-                <h3>References</h3>
-                <ul>
-                    <li>Source 1</li>
-                    <li>Source 2</li>
-                    <li>Source 3</li>
-                </ul>
+
+        <div id = "conclusion" class="container">
+            <div class = "content">
+                <h1>In conclusion:</h1>
+                    <h2>
+                        <p>As consumers, we have <b>many ways to make a difference</b> in reducing the amount of food waste in the United States.</p>
+                    </h2>
+                <div subtitle style="font: size 2.0em weight 800px; color:#386667"><p>So what are we wasting for?</p></div>
             </div>
+            
+            <button style="position: relative; left:1100px; bottom: 0px" class="btn" onclick=scrollToSection('titlepage')>
+                Back to top ↑
+              </button>
+
+            </div>
+
+        <!--LIST OF OUR REFERENCES HERE-->
+        <hr>
+        <div id = "refs" class="container">
+            <h3>References</h3>
+            <ul>
+                <li>Source 1</li>
+                <li>Source 2</li>
+                <li>Source 3</li>
+            </ul>
         </div>
+        <div class="spacer"></div>
 
         <script>
             document.addEventListener("scroll", function() {
