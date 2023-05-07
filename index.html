@@ -295,16 +295,81 @@
                 <h3 class="content" style="text-align: center;">
                     Click on a card to learn more.
                 </h3>
-                <div class="flex-container" style="position:relative; left:0px; top:32px; z-index: 1;">
-                    <div><img style="width: 310px; height: auto;" src="assets/card_bestifusedby.svg"></img></div>
-                    <div><img style="width: 310px; height: auto;" src="assets/card_sellby.svg"></img></div>
-                    <div><img style="width: 310px; height: auto;" src="assets/card_useby.svg"></img></div>
-                    <div><img style="width: 310px; height: auto;" src="assets/card_freezeby.svg"></img></div>
+
+                  <!-- code to add animation to the cards -->
+                  <div class="flex-container" style="position:relative; left:0px; top:32px; z-index: 1;">
+                    
+                    <!-- //first show the collapsed cards --> 
+                    <div><img src="assets/cardcollapse_bestifusedby.svg" alt="Collapsed Card" class="collapse-bestuseby"></img></div>
+                    <div><img src="assets/card_bestifusedby.svg" alt="Expanded Card" class="expanded-bestuseby hidden"></img></div>
+                    <div><img src="assets/cardcollapse_sellby.svg" alt="Collapsed Card" class="collapse-sellby"></img></div>
+                    <div><img src="assets/card_sellby.svg" alt="Expanded Card" class="expanded-sellby hidden"></img></div>
+                    <div><img src="assets/cardcollapse_useby.svg" alt="Collapsed Card" class="collapse-useby"></img></div>
+                    <div><img src="assets/card_useby.svg" alt="Expanded Card" class="expanded-useby hidden"></img></div>
+                    <div><img src="assets/cardcollapse_freezeby.svg" alt="Collapsed Card" class="collapse-freezeby"></img></div>
+                    <div><img src="assets/card_freezeby.svg" alt="Expanded Card" class="expanded-freezeby hidden"></img></div>
+                    <!-- Show the expanded cards but hide them using CSS -->
                 </div>
+
             </div>
         </div>
 
-        <div id = "section10"  class = "screen">
+
+        <!-- //now simply add javascript such that when user clicks on the collapsed card, we use JavaScript to add the hidden class to the collapsed card and remove the hidden class from the expanded card  -->
+        <script>
+            const collBestuseby = document.querySelector('.collapse-bestuseby');
+            const expBestuseby = document.querySelector('.expanded-bestuseby');
+      
+            collBestuseby.addEventListener('click', function() {
+                collBestuseby.classList.add('hidden');
+                expBestuseby.classList.remove('hidden');
+            });
+            expBestuseby.addEventListener('click', function() {
+                collBestuseby.classList.remove('hidden');
+                expBestuseby.classList.add('hidden');
+            });
+
+            const collSellby = document.querySelector('.collapse-sellby');
+            const expSellby = document.querySelector('.expanded-sellby');
+
+            collSellby.addEventListener('click', function() {
+                collSellby.classList.add('hidden');
+                expSellby.classList.remove('hidden');
+            });
+            expSellby.addEventListener('click', function() {
+                collSellby.classList.remove('hidden');
+                expSellby.classList.add('hidden');
+            });
+
+            const collUseby = document.querySelector('.collapse-useby');
+            const expUseby = document.querySelector('.expanded-useby');
+
+            collUseby.addEventListener('click', function() {
+                collUseby.classList.add('hidden');
+                expUseby.classList.remove('hidden');
+            });
+
+            expUseby.addEventListener('click', function() {
+                collUseby.classList.remove('hidden');
+                expUseby.classList.add('hidden');
+            });
+            const collFreezeby = document.querySelector('.collapse-freezeby');
+            const expFreezeby = document.querySelector('.expanded-freezeby');
+
+            collFreezeby.addEventListener('click', function() {
+                collFreezeby.classList.add('hidden');
+                expFreezeby.classList.remove('hidden');
+            });
+            expFreezeby.addEventListener('click', function() {
+                collFreezeby.classList.remove('hidden');
+                expFreezeby.classList.add('hidden');
+            });
+          </script>
+
+
+
+        
+<div id = "section10"  class = "screen">
             <div class = "container">
                 <div class="content">
                     <h1 class="content">2) Store food properly to prolong its freshness.</h1>
